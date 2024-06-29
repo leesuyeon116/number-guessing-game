@@ -3,6 +3,9 @@ let playButton = document.getElementById("play-button");
 let userInput = document.getElementById("user-input");
 let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
+let chances = 5;
+let gameOver = false;
+let chanceArea = document.getElementById("chance-area");
 
 playButton.addEventListener("click", play);
 resetButton.addEventListener("click", reset);
@@ -14,6 +17,11 @@ function pickRandomNum() {
 
 function play() {
     let userValue = userInput.value;
+
+    chances -- ;
+    chanceArea.textContent = `남은기회:${chances}번`;
+ 
+
     if(userValue < computerNum) { // 만약에 userValue가 computerNum보다 작으면
         resultArea.textContent = "UP!";
     } else if(userValue > computerNum) { // 만약에 userValue가 computerNum보다 크면
@@ -21,7 +29,17 @@ function play() {
     } else {
         resultArea.textContent = "정답입니다~";
     }
+
+    if(chances < 1) {
+        gameOver = true;
+    }
+
+    if(chances == true) {
+        playButton.disabled = true;
+    }
+
 }
+
 function reset() {
     // user input창 깨끗하게 정리되고
     userInput.value = "";
