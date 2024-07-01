@@ -1,6 +1,6 @@
 body {
     background-size: cover;
-    height: 110vh;
+    height: 130vh;
     width: 55%;
     max-width:1200px; 
     margin: 0 auto;
@@ -46,6 +46,10 @@ body {
     margin: 15px auto 15px;
     padding: 0 10px;
     text-align: center;
+}
+
+.btn {
+    margin-bottom: 20px;
 }
 
 /* 반응형 */
