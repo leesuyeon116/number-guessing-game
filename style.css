@@ -52,6 +52,12 @@ body {
     margin-bottom: 20px;
 }
 
+.btn-light:hover {
+    background-color: #FFBE98;
+    border-color: #F2E8DA;
+}
+
+
 /* 반응형 */
 @media screen and (max-width: 70rem) {
     .title {
